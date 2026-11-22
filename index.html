@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Haliday Special Treat | Catering & Food Delivery</title>
+<meta name="description" content="Order party jollof, small chops and event catering from Haliday Special Treat. Delivered fresh across Lagos.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍲</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#home"><i>🍲</i><span>Haliday Special Treat<small>Catering &amp; delivery</small></span></a>
+    <nav><ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#catering">Event catering</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <button class="cartbtn" id="openCart" aria-label="Open cart">🛒 Cart<b id="count">0</b></button>
+  </div>
+</header>
+
+<main id="home">
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Every day feels like a <em>holiday</em> with a special treat.</h1>
+      <p>Party jollof, small chops and full event catering, cooked fresh and delivered hot to your door across Lagos.</p>
+      <div class="finder">
+        <input id="addr" placeholder="Enter your delivery address" aria-label="Delivery address">
+        <a class="btn" href="#menu" id="findBtn">Order now</a>
+      </div>
+      <div class="chips"><span>⏱ 45 min delivery</span><span>🔥 Cooked to order</span><span>🎉 Events of 10 to 1,000</span></div>
+    </div>
+    <div class="plate" aria-hidden="true">
+      <div class="disc"><img id="heroImg" alt="Plate of party jollof rice with chicken" data-e="🍛"></div>
+      <div class="tag t1">⭐ 4.9 loved by 2,000+ guests</div>
+      <div class="tag t2">🛵 Free delivery over ₦20,000</div>
+    </div>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="head">
+      <h2>Hungry? Pick your treat.</h2>
+      <p>Tap the plus to add a dish to your cart. Prices are per portion.</p>
+    </div>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="cater" id="catering">
+  <div class="wrap">
+    <div class="head">
+      <h2>Catering for every celebration</h2>
+      <p>Weddings, birthdays, naming ceremonies, office lunches. We cook, serve and clean up.</p>
+    </div>
+    <div class="pk">
+      <div class="pkg">
+        <h3>Small Gathering</h3>
+        <div class="big">₦150,000</div>
+        <p>Up to 30 guests</p>
+        <ul><li>Jollof or fried rice</li><li>Two proteins</li><li>Salad and drinks</li><li>Disposable servingware</li></ul>
+        <button class="btn ghost" data-pkg="Small Gathering (up to 30 guests)">Book this package</button>
+      </div>
+      <div class="pkg hot">
+        <h3>Party Pack</h3>
+        <div class="big">₦450,000</div>
+        <p>Up to 100 guests</p>
+        <ul><li>Rice, swallow and soup options</li><li>Small chops platter</li><li>Servers and chafing dishes</li><li>Free tasting session</li></ul>
+        <button class="btn" data-pkg="Party Pack (up to 100 guests)">Book this package</button>
+      </div>
+      <div class="pkg">
+        <h3>Grand Event</h3>
+        <div class="big">Custom quote</div>
+        <p>100 to 1,000 guests</p>
+        <ul><li>Full buffet or plated service</li><li>Live grill station</li><li>Event coordinator</li><li>Cakes and desserts</li></ul>
+        <button class="btn ghost" data-pkg="Grand Event (100+ guests)">Request a quote</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="head"><h2>From our kitchen to your table</h2></div>
+    <div class="steps">
+      <div class="step"><h3>Choose your food</h3><p>Browse the menu or pick an event package.</p></div>
+      <div class="step"><h3>Tell us where and when</h3><p>Share your address, date and number of guests.</p></div>
+      <div class="step"><h3>We cook fresh</h3><p>Your order is prepared the same day, never reheated.</p></div>
+      <div class="step"><h3>Delivered and served</h3><p>A rider or our serving team arrives right on time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap cgrid">
+    <div class="info">
+      <h2 style="font-size:clamp(30px,4vw,44px);font-weight:800">Ready to place your order?</h2>
+      <p>Fill in your details. We will open WhatsApp with your cart and event details ready to send.</p>
+      <p><strong>📍 Kitchen:</strong> Lagos, Nigeria</p>
+      <p><strong>📞 Phone / WhatsApp:</strong> +234 9042414897</p>
+      <p><strong>✉ Email:</strong> abdullahalliowe310@gmail.com</p>
+      <p><strong>🕘 Hours:</strong> Daily, 8am to 9pm</p>
+    </div>
+    <form id="orderForm">
+      <label>Your name<input id="fn" required></label>
+      <label>Delivery address<input id="fa" required></label>
+      <label>Order type
+        <select id="ft"><option>Food delivery</option><option>Event catering</option><option>Both</option></select>
+      </label>
+      <label>Date and time needed<input id="fd" type="datetime-local"></label>
+      <label>Extra details<textarea id="fm" rows="3" placeholder="Number of guests, allergies, spice level"></textarea></label>
+      <button class="btn dark" type="submit">Send order on WhatsApp</button>
+      <p class="note">Your cart items are included in the message automatically.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap"><span>© Haliday Special Treat. All rights reserved.</span><span>Cooked with love in Lagos.</span></div>
+</footer>
+
+<div class="veil" id="veil"></div>
+<aside class="drawer" id="drawer" aria-label="Your cart">
+  <header><h3>Your cart</h3><button class="x" id="closeCart" aria-label="Close cart">×</button></header>
+  <div id="lines"></div>
+  <div class="total"><span>Total</span><span id="total">₦0</span></div>
+  <a class="btn dark" href="#contact" id="checkout" style="justify-content:center">Checkout</a>
+</aside>
+
+<script src="index.js"></script>
+</body>
+</html>
